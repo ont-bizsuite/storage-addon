@@ -186,22 +186,6 @@ method：GET
 
 ```json
 {
-    "action": "purchaseOrderResult",
-    "error": 0,
-    "desc": "SUCCESS",
-    "result": {
-        "result": "2",
-        "tokenId": [
-            6,
-            6
-        ],
-        "orderId": "1efeb11772a9c4c454f95d8518d42aac0b39eafb"
-    },
-    "version": "v1"
-}
-```
-```json
-{
     "action": "consumeTokenResult",
     "error": 0,
     "desc": "SUCCESS",
@@ -226,18 +210,6 @@ method：GET
 }
 ```
 
-```json
-{
-    "action": "authOrderResult",
-    "error": 0,
-    "desc": "SUCCESS",
-    "result": {
-        "result": "2",
-        "authId": "35d3bcafa3e84d34be6ffff8713fde7d5e6f9e30"
-    },
-    "version": "v1"
-}
-```
 
 | Field_Name | Type   | Description                   |
 |:-----------|:-------|:------------------------------|
@@ -247,8 +219,5 @@ method：GET
 | desc        | String | 成功为SUCCESS，失败为错误描述 |
 | result     | Map | 成功返回，失败返回""     |
 | result        | String | null-未扫码；0-交易失败；1-交易发送成功；2-上链成功 |
-| orderId        | String | 合约生成的订单号 |
-| tokenId        | List | 以Data ID生成的Token ID，第一位表示起始ID，第二位表示结束ID |
 | dataId        | String | Data ID |
-| authId        | String | 合约生成的授权上架编号 |
-| downloadUrl   | String | 数据下载地址 |
+| downloadUrl   | String | 数据下载地址 | 
